@@ -1,0 +1,5 @@
+#card__person {
+    place-items: center;
+    font-size: 4rem;
+    word-break: break-all;
+}

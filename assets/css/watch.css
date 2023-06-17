@@ -1,0 +1,23 @@
+.module__content:has(.clock__wrapper) {display: grid; place-items: center;}
+.clock__wrapper {place-items: center;}
+.clock {
+    display: grid;
+    place-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+.clock__title {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+.clock__hour {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+.clock__btns {
+    flex-flow: row wrap;
+}

@@ -1,0 +1,17 @@
+.module__content:has(.playground) {display: grid; place-items: center;}
+.playground {
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 16px;
+    background-color: var(--bg);
+    border: 1px solid var(--main-bg);
+    border-radius: 8px;
+}
+.ball {
+    width: 32px;
+    height: 32px;
+    background-color: #E30032;
+    border-radius: 50%;
+}

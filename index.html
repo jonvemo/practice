@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <svg class="icons">
+        <symbol id="home" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.57144 23C4.46687 23 3.57144 22.1046 3.57144 21V14.6429H3.00001C2.20362 14.6429 1.48312 14.1704 1.16572 13.44C0.848317 12.7095 0.994509 11.8604 1.5379 11.2782L10.5379 1.63536C10.9162 1.23009 11.4457 1 12 1C12.5544 1 13.0839 1.23009 13.4621 1.63536L22.4621 11.2782C23.0055 11.8604 23.1517 12.7095 22.8343 13.44C22.5169 14.1704 21.7964 14.6429 21 14.6429H20.4286V21C20.4286 22.1046 19.5332 23 18.4286 23H15C13.8954 23 13 22.1046 13 21V16.5714H11V21C11 22.1046 10.1046 23 9.00001 23H5.57144ZM9.00001 14.5714H15V21H18.4286V12.6429H21L12 3L3.00001 12.6429H5.57144V21H9.00001V14.5714Z"/>
+        </symbol>
+        <symbol id="sidebar" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2C1 1.44772 1.44772 1 2 1H22C22.5523 1 23 1.44772 23 2V22C23 22.5523 22.5523 23 22 23H2C1.44772 23 1 22.5523 1 22V2ZM3 3V21H7V3H3ZM9 3V21H21V3H9Z"/>
+        </symbol>
+        <symbol id="skip" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.51523 1.12536C1.83319 0.949132 2.22173 0.959334 2.53 1.152L18.53 11.152C18.8224 11.3347 19 11.6552 19 12C19 12.3448 18.8224 12.6653 18.53 12.848L2.53 22.848C2.22173 23.0407 1.83319 23.0509 1.51523 22.8746C1.19728 22.6984 1 22.3635 1 22V2C1 1.63648 1.19728 1.30158 1.51523 1.12536ZM3 3.80425V20.1958L16.1132 12L3 3.80425Z"/>
+            <path d="M22 1C22.5523 1 23 1.44772 23 2V22C23 22.5523 22.5523 23 22 23C21.4477 23 21 22.5523 21 22V2C21 1.44772 21.4477 1 22 1Z"/>
+        </symbol>
+        <symbol id="play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.51523 1.12536C3.83319 0.949132 4.22173 0.959334 4.53 1.152L20.53 11.152C20.8224 11.3347 21 11.6552 21 12C21 12.3448 20.8224 12.6653 20.53 12.848L4.53 22.848C4.22173 23.0407 3.83319 23.0509 3.51523 22.8746C3.19728 22.6984 3 22.3635 3 22V2C3 1.63648 3.19728 1.30158 3.51523 1.12536ZM5 3.80425V20.1958L18.1132 12L5 3.80425Z"/>
+        </symbol>
+        <symbol id="pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5 1C21.3284 1 22 1.67157 22 2.5V21.5C22 22.3284 21.3284 23 20.5 23C19.6716 23 19 22.3284 19 21.5V2.5C19 1.67157 19.6716 1 20.5 1Z"/>
+            <path d="M4.5 1C5.32843 1 6 1.67157 6 2.5V21.5C6 22.3284 5.32843 23 4.5 23C3.67157 23 3 22.3284 3 21.5V2.5C3 1.67157 3.67157 1 4.5 1Z"/>
+        </symbol>
+            
+    </svg>
+    <link rel='stylesheet' href='./assets/css/index.css'/>
+</head>
+<body>
+    <header class="header" id="header">
+        <h1 class="header__title">JavaScript</h1>
+    </header>
+    <aside class="aside grid" id="aside">
+        <div class="aside__btns flex">
+            <button class="btn btn__small" id="btn__menu"><svg width="1.5rem" height="1.5rem"><use href="#sidebar"></use></svg></button>
+            <a class="btn btn__small" href="#module__1"><svg width="1.5rem" height="1.5rem"><use href="#skip"></use></svg></a>
+            <a class="btn btn__large" href="./index.html"><svg width="1.5rem" height="1.5rem"><use href="#home"></use></svg>Home</a>
+        </div>  
+        <nav class="nav">
+            <h3 class="aside__title">Contents Table</h3>
+            <ul class="list" id="list">
+                <template id="template__contents">
+                    <li class="list__item">
+                        <a class="list__link" href=""></a>
+                    </li>
+                </template>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main" id="main">
+        <section class="module">
+            <h2 class="class module__title" id="module__1" data-description="Insert text in HTML element">Person</h2>
+            <div class="module__content">
+                <div id="card__person"></div>
+            </div>
+        </section>
+        <section class="module">
+            <h2 class="class module__title" id="module__2" data-description="Move with Keyboard">Playground</h2>
+            <div class="module__content">
+                <div class="playground" id="playground">
+                    <div class="ball" id="ball"></div>
+                </div>
+            </div>
+        </section>
+        <section class="module">
+            <h2 class="class module__title" id="module__3" data-description="Create a Clock and Alarm">Watch</h2>
+            <div class="module__content">
+                <div class="clock__wrapper grid">
+                    <div class="clock">
+                        <h3 class="clock__title">Time</h3>
+                        <div class="clock__hour" id="clock__hour">00:00:00</div>
+                    </div>
+                    <div class="clock__btns flex">
+                        <button class="btn btn__small" id="clock__on"><svg width="1.5rem" height="1.5rem"><use href="#play"></use></svg></button>
+                        <button class="btn btn__small" id="clock__off"><svg width="1.5rem" height="1.5rem"><use href="#pause"></use></svg></button>
+    
+                        <button class="btn btn__small" id="alarm__on"><svg width="1.5rem" height="1.5rem"><use href="#play"></use></svg></button>
+                        <button class="btn btn__small" id="alarm__off"><svg width="1.5rem" height="1.5rem"><use href="#pause"></use></svg></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="module">
+            <h2 class="class module__title" id="module__4" data-description="Countdown with Date">Countdown</h2>
+            <div class="module__content">
+                <div id="countdown"></div>
+            </div>
+        </section>
+        <section class="module">
+            <h2 class="class module__title" id="module__5">Module 5</h2>
+            <div class="module__content"></div>
+        </section>
+        <section class="module">
+            <h2 class="class module__title" id="module__6">Module 6</h2>
+            <div class="module__content"></div>
+        </section>
+        <section class="module">
+            <h2 class="class module__title" id="module__7">Module 7</h2>
+            <div class="module__content"></div>
+        </section>
+    </main>
+    <script type="module" src="./assets/js/index.js"></script>
+</body>
+</html>
