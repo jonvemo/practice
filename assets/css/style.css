@@ -42,7 +42,7 @@ body {margin: 0; background-color: var(--main-bg); counter-reset: title;}
     margin: auto 16px 16px 16px;
     background-color: var(--transparent-bg);
     border-radius: 8px;
-    transition: transform .4s ease;
+    transition: transform .4s ease, height .4s ease;
     transform: translateX(calc(-268px - 32px));
     word-break: break-all;
     z-index: 1;
@@ -97,6 +97,17 @@ body {margin: 0; background-color: var(--main-bg); counter-reset: title;}
 }
 #btn__menu.active {
     transform: translateX(0);
+}
+.aside:focus-within:not(.active):has(:focus-visible) {
+    height: calc(100vh - 32px);
+    transform: translateX(0);  
+}
+.aside:focus-within:not(.active):has(:focus-visible) #btn__menu{
+    transform: translateX(0);  
+}
+.aside:focus-within:not(.active):has(:focus-visible) ~ .main {
+    width: calc(100% - (268px + 32px));
+    transform: translateX(calc((268px + 32px)));
 }
 
 
