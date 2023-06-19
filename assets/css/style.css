@@ -61,8 +61,8 @@ body {margin: 0; background-color: var(--main-bg); counter-reset: title;}
 }
 .list {
     margin: 0;
-    padding-inline-start: 32px;
-    max-height: 250px;
+    padding: 8px 0 8px 32px;
+    max-height: 30vh;
     overflow-y: scroll;
 }
 .list:focus-within {
@@ -71,6 +71,9 @@ body {margin: 0; background-color: var(--main-bg); counter-reset: title;}
 .list__link {
     display: inline-block;
     padding: 16px 0;
+}
+.list__link:focus-visible+.list__description {
+    margin-top: 8px;
 }
 .list__link:is(:hover,:focus-visible)+.list__description, .list__description:is(:hover) {
     position: unset;
@@ -85,8 +88,9 @@ body {margin: 0; background-color: var(--main-bg); counter-reset: title;}
     background-color: var(--transparent-bg);
     border-radius: 8px;
     visibility: hidden;
-    transition: transform .4s ease, opacity .4s ease;
     opacity: 0;
+    backdrop-filter: blur(4px);
+    transition: transform .4s ease, opacity .4s ease;
     transform: translateY(50%);
 }
 
