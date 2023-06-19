@@ -65,11 +65,14 @@ body {margin: 0; background-color: var(--main-bg); counter-reset: title;}
     max-height: 250px;
     overflow-y: scroll;
 }
-
-.list__item {
-    margin: 16px 0;
+.list:focus-within {
+    outline: 4px solid var(--accent);
 }
-.list__link:is(:hover,:focus-visible)+.list__description {
+.list__link {
+    display: inline-block;
+    padding: 16px 0;
+}
+.list__link:is(:hover,:focus-visible)+.list__description, .list__description:is(:hover) {
     position: unset;
     visibility: visible;
     opacity: 1;
@@ -78,7 +81,7 @@ body {margin: 0; background-color: var(--main-bg); counter-reset: title;}
 .list__description {
     position: absolute;
     padding: 16px;
-    margin-left: -32px;
+    margin: 0 0 0 -32px;
     background-color: var(--transparent-bg);
     border-radius: 8px;
     visibility: hidden;
