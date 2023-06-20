@@ -61,21 +61,21 @@ body {margin: 0; background-color: var(--main-bg); counter-reset: title;}
 }
 .list {
     margin: 0;
-    padding: 8px 0 8px 32px;
+    padding: 8px;
     max-height: 30vh;
     overflow-y: scroll;
 }
 .list:focus-within {
-    outline: 4px solid var(--accent);
+    outline: 4px solid var(--main-color);
 }
 .list__link {
     display: inline-block;
     padding: 16px 0;
 }
-.list__link:focus-visible+.list__description {
+.list__item:has(.list__link:focus-visible)+.list__description {
     margin-top: 8px;
 }
-.list__link:is(:hover,:focus-visible)+.list__description, .list__description:is(:hover) {
+.list__item:has(.list__link:is(:hover,:focus-visible))+.list__description, .list__description:is(:hover) {
     position: unset;
     visibility: visible;
     opacity: 1;
@@ -84,7 +84,7 @@ body {margin: 0; background-color: var(--main-bg); counter-reset: title;}
 .list__description {
     position: absolute;
     padding: 16px;
-    margin: 0 0 0 -32px;
+    margin: 0;
     background-color: var(--transparent-bg);
     border-radius: 8px;
     visibility: hidden;

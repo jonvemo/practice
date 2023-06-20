@@ -16,7 +16,7 @@ export const CONTENTS_TABLE =
         //$TEMPLATE.querySelector('a').href = `#module__${i}`
         $TEMPLATE.querySelector('a').href = `#${$ID}`
         $TEMPLATE.querySelector('a').textContent = `Module ${i}: ${$MODULE}`
-        $TEMPLATE.querySelector('p').textContent = $MODULE_DESCRIPTION
+        $TEMPLATE.querySelector('dd').textContent = $MODULE_DESCRIPTION
         let $clone = document.importNode($TEMPLATE,true)
         $FRAGMENT.appendChild($clone)
     })
