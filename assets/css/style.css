@@ -65,7 +65,7 @@ body {margin: 0; background-color: var(--main-bg); counter-reset: title;}
     max-height: 30vh;
     overflow-y: scroll;
 }
-.list:focus-within {
+.list:focus-within:has(.list__link:focus-visible) {
     outline: 4px solid var(--main-color);
 }
 .list__link {
